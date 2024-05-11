@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Favoritos from '../components/favoritos';
+import Cadastro from '../components/cadastro';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
   {
     path: "favoritos",
     element: <Favoritos />,
+  },
+  {
+    path: "cadastro",
+    element: <Cadastro />,
   },
 ]);
 
