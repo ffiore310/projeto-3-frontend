@@ -1,0 +1,259 @@
+{
+    "generated_at": "2024-05-14T11:29:23+00:00",
+    "coverage": {
+      "type": "competition",
+      "competition_properties": {
+        "brackets": false,
+        "missing_players": false,
+        "player_transfer_history": false,
+        "schedules": true,
+        "season_player_statistics": true,
+        "season_stats_leaders": true,
+        "season_team_statistics": true,
+        "standings": "live",
+        "team_squads": true
+      },
+      "sport_event_properties": {
+        "basic_play_by_play": true,
+        "basic_player_stats": true,
+        "basic_team_stats": true,
+        "extended_player_stats": false,
+        "extended_team_stats": false,
+        "deeper_play_by_play": true,
+        "deeper_team_stats": true,
+        "deeper_player_stats": true,
+        "lineups": true,
+        "goal_scorers": true,
+        "scores": "live",
+        "assists": true
+      }
+    },
+    "season": {
+      "id": "sr:season:113943",
+      "name": "Brasileiro Serie A 2024",
+      "start_date": "2024-04-13",
+      "end_date": "2024-12-09",
+      "year": "2024",
+      "competition_id": "sr:competition:325",
+      "sport": {
+        "id": "sr:sport:1",
+        "name": "Soccer"
+      },
+      "category": {
+        "id": "sr:category:13",
+        "name": "Brazil",
+        "country_code": "BRA"
+      },
+      "competition": {
+        "id": "sr:competition:325",
+        "name": "Brasileiro Serie A",
+        "gender": "men"
+      }
+    },
+    "stages": [
+      {
+        "order": 1,
+        "type": "league",
+        "phase": "regular season",
+        "start_date": "2024-04-13",
+        "end_date": "2024-12-09",
+        "year": "2024",
+        "groups": [
+          {
+            "id": "sr:league:82105",
+            "name": "Brasileiro Serie A",
+            "competitors": [
+              {
+                "id": "sr:competitor:1974",
+                "name": "CR Vasco da Gama RJ",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "VDG",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1954",
+                "name": "Cruzeiro EC MG",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "CRU",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1966",
+                "name": "SC Internacional RS",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "INT",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1980",
+                "name": "EC Juventude RS",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "JUV",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1977",
+                "name": "Atletico Mineiro MG",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "ATL",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1957",
+                "name": "SC Corinthians SP",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "COR",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1962",
+                "name": "EC Vitoria BA",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "VIT",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:5926",
+                "name": "Gremio FB Porto Alegrense RS",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "GPA",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1958",
+                "name": "Botafogo FR RJ",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "BOT",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1967",
+                "name": "CA Paranaense PR",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "CAP",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1963",
+                "name": "SE Palmeiras SP",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "PAL",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:5981",
+                "name": "CR Flamengo RJ",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "FLA",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1955",
+                "name": "EC Bahia BA",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "BAH",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1961",
+                "name": "Fluminense FC RJ",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "FLU",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:2020",
+                "name": "Fortaleza EC CE",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "FOR",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1981",
+                "name": "Sao Paulo FC SP",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "SPA",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1984",
+                "name": "Criciuma EC SC",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "CRI",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:1999",
+                "name": "Red Bull Bragantino SP",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "BRA",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:7314",
+                "name": "AC Goianiense GO",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "GOI",
+                "gender": "male"
+              },
+              {
+                "id": "sr:competitor:49202",
+                "name": "Cuiaba Esporte Clube MT",
+                "country": "Brazil",
+                "country_code": "BRA",
+                "abbreviation": "CUI",
+                "gender": "male"
+              }
+            ],
+            "max_rounds": 38,
+            "coverage": {
+              "type": "group",
+              "group_properties": {
+                "brackets": false,
+                "cup": false,
+                "league": true,
+                "missing_players": false,
+                "qualification": false,
+                "schedules": true,
+                "results": true,
+                "standings": "live",
+                "group_stage": false
+              },
+              "sport_event_properties": {
+                "basic_play_by_play": true,
+                "basic_player_stats": true,
+                "basic_team_stats": true,
+                "lineups": true,
+                "extended_player_stats": false,
+                "extended_team_stats": false,
+                "deeper_team_stats": true,
+                "deeper_player_stats": true,
+                "deeper_play_by_play": true,
+                "goal_scorers": true,
+                "scores": "live"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
