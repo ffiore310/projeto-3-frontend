@@ -26,30 +26,41 @@ export default function Table() {
         getTable().then((data) => setData(data));
     }, []);
 
+    const fullTimeTotal = data?.season_form_standings?.find(standing => standing.type === "full_time_total")?.groups[0]?.form_standings;
+
+
     return (
         <table>
             <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Posição</th>
-                    <th>Time</th>
-                    <th>Idade</th>
-                    <th>Altura</th>
-                    <th>Peso</th>
-                </tr>
-            </thead>
-            <tbody>
-                {data.map((player) => (
-                    <tr key={player.id}>
-                        <td>{player.name}</td>
-                        <td>{player.position}</td>
-                        <td>{player.team}</td>
-                        <td>{player.age}</td>
-                        <td>{player.height}</td>
-                        <td>{player.weight}</td>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Time</th>
+                        <th>Jogos</th>
+                        <th>Vitórias</th>
+                        <th>Empates</th>
+                        <th>Derrotas</th>
+                        <th>Gols Pró</th>
+                        <th>Gols Contra</th>
+                        <th>Saldo de Gols</th>
+                        <th>Pontos</th>
                     </tr>
-                ))}
-            </tbody>
+                </thead>
+                <tbody>
+                    {fullTimeTotal?.map((team, index) => (
+                        <tr key={team.competitor.id}>
+                            <td>{index + 1}</td>
+                            <td>{team.competitor.name}</td>
+                            <td>{team.played}</td>
+                            <td>{team.win}</td>
+                            <td>{team.draw}</td>
+                            <td>{team.loss}</td>
+                            <td>{team.goals_for}</td>
+                            <td>{team.goals_against}</td>
+                            <td>{team.goals_diff}</td>
+                            <td>{team.points}</td>
+                        </tr>
+                    ))}
+                </tbody>
         </table>
     );
 }
