@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Favoritos from '../components/favoritos';
 import Cadastro from '../components/cadastro';
+import Table from '../components/table';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
     path: "cadastro",
     element: <Cadastro />,
   },
+  {
+    path: "table",
+    element: <Table />,
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
