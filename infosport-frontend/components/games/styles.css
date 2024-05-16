@@ -1,0 +1,31 @@
+.game-widget {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.game-date {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.teams {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.vs {
+    margin: 0 10px;
+}
+
+.probabilities {
+    display: flex;
+    justify-content: space-between;
+}
+
+.probability {
+    font-size: 1em;
+    margin-right: 10px;
+}
