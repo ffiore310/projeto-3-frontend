@@ -11,6 +11,7 @@ import Cadastro from '../components/cadastro';
 import Table from '../components/table';
 import Times from '../components/times';
 import Games from '../components/games/index.jsx';
+import Login from '../components/login';
 
 const router = createBrowserRouter([
   {
@@ -36,7 +37,11 @@ const router = createBrowserRouter([
   {
     path: "games",
     element: <Games/>
-  }
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

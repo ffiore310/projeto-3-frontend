@@ -33,7 +33,7 @@ export default function Cadastro() {
             await axios.request(options);
             console.log("Sucesso ao criar usuário");
             setMsgSucesso(true);
-            setTimeout(() => navigate('/'), 2000);
+            setTimeout(() => navigate('/login'), 2000);
   
         } catch (error) {
             console.error("Falha ao criar usuário", error);
@@ -62,7 +62,7 @@ export default function Cadastro() {
             
             <button type="submit">Sign Up</button>
             <div className="msgSucesso">
-                {msgSucesso && <p>Usuário criado com sucesso! Redirecionando para a Home...</p>}
+                {msgSucesso && <p>Usuário criado com sucesso! Redirecionando para a tela de Login...</p>}
             </div>
             <div className="msgError">
                 {error && <p>{error}</p>}
