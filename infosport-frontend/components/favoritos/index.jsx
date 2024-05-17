@@ -1,9 +1,11 @@
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
 
 export default function Favoritos() {
     const [favoritos, setFavoritos] = useState([]);
     let token = localStorage.getItem('token');
+    const navigate = useNavigate();
 
     function getFavoritos() {
         const config = {
@@ -46,7 +48,6 @@ export default function Favoritos() {
 
     return (
         <div className="favoritos">
-            <h1>Times Favoritos</h1>
             <div className="timesFavoritos">
             <ul>
             {favoritos.map((fav, index) => (
@@ -56,6 +57,7 @@ export default function Favoritos() {
               </li>
             ))}
             </ul>
+            <button onClick={() => navigate('/')}>Ir para Home</button> 
             </div>
         </div>
     );
