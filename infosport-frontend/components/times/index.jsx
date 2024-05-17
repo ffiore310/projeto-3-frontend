@@ -31,7 +31,7 @@ function Times() {
     function favoritarTime(team) {
       if (favoritedTeams.includes(team)) {
         setMessage(`O time ${team} já está favoritado!`);
-        setTimeout(() => setMessage(''), 1500); // Limpa a mensagem após 5 segundos
+        setTimeout(() => setMessage(''), 1500); 
         return;
     }
 
