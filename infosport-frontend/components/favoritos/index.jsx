@@ -18,6 +18,27 @@ export default function Favoritos() {
                 setFavoritos(res.data)
             });
         }
+    function desfavorita(itemName) {
+        const config = {
+            headers: {
+              Authorization: `token ${token}`,
+            },
+            data: { // Inclua os dados aqui dentro do objeto `data` na configuração
+              name: itemName
+          },
+          };
+        axios
+            .delete(`http://localhost:8000/api/favorita/delete`,config)
+            .then((res) => {
+                console.log(res.data);
+                axios
+                  .get("http://localhost:8000/api/favorita/",config)
+                  .then((res) => {
+                      console.log(res.data);
+                      setFavoritos(res.data)
+                  });
+            });
+        }
     
     useEffect(() => {
         getFavoritos();
@@ -31,7 +52,7 @@ export default function Favoritos() {
             {favoritos.map((fav, index) => (
               <li key={index}>
                 {fav.title}
-                <button onClick={() => desfavorita(fav.sigla)}>Desfavoritar</button>
+                <button onClick={() => desfavorita(fav)}>Desfavoritar</button>
               </li>
             ))}
             </ul>
