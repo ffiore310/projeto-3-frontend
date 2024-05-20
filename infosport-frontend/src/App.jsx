@@ -1,13 +1,13 @@
 
 import './App.css'
 import Header from '../components/header'
-import Inicio from '../components/inicio'
+import Times from '../components/times'
 
 function App() {
 
   return (
     
-      <Inicio/>
+      <Times/>
     
   )
 }
