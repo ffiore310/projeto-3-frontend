@@ -1,15 +1,14 @@
 
 import './App.css'
 import Header from '../components/header'
-import Times from '../components/times'
+import Inicio from '../components/inicio'
 
 function App() {
 
   return (
-    <div>
-      <Header />
-      <Times />
-    </div>
+    
+      <Inicio/>
+    
   )
 }
 

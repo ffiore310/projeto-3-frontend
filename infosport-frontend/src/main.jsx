@@ -12,6 +12,11 @@ import Table from '../components/table';
 import Times from '../components/times';
 import Games from '../components/games/index.jsx';
 import Login from '../components/login';
+import Inicio from '../components/inicio';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'jquery/dist/jquery.min.js';
+import 'popper.js/dist/popper.min.js';
+
 
 const router = createBrowserRouter([
   {
@@ -42,6 +47,12 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
+  {
+    path: "/inicio",
+    element: <Inicio />,
+  },
+  
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from "react";
+import Header from '/components/header'
+import './style.css';
 
 export default function Favoritos() {
     const [favoritos, setFavoritos] = useState([]);
@@ -47,18 +49,25 @@ export default function Favoritos() {
         }, []);
 
     return (
+      <div>
+        <Header />
         <div className="favoritos">
             <div className="timesFavoritos">
-            <ul>
+            <ul className = "team-list">
+              
             {favoritos.map((fav, index) => (
-              <li key={index}>
+              <div className="card">
+              <li className = "team-item"key={index}>
                 {fav.title}
-                <button onClick={() => desfavorita(fav)}>Desfavoritar</button>
+                <button className = "favorite-button" onClick={() => desfavorita(fav)}>★</button>
               </li>
+              </div>
             ))}
+            
             </ul>
             <button onClick={() => navigate('/')}>Ir para Home</button> 
             </div>
+        </div>
         </div>
     );
 }

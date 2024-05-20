@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState, useEffect } from 'react';
+import Header from '/components/header'
+import './styles.css';
 
 export default function Table() {
-    
-
     const [data, setData] = useState([]);
 
     async function getTable() {
@@ -28,10 +28,13 @@ export default function Table() {
 
     const fullTimeTotal = data?.season_form_standings?.find(standing => standing.type === "full_time_total")?.groups[0]?.form_standings;
 
-
     return (
-        <table>
-            <thead>
+        <div>
+            <Header />
+            <h1>Tabela</h1>
+            <table>
+                
+                <thead>
                     <tr>
                         <th>Posição</th>
                         <th>Time</th>
@@ -45,9 +48,9 @@ export default function Table() {
                         <th>Pontos</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     {fullTimeTotal?.map((team, index) => (
-                        <tr key={team.competitor.id}>
+                        <tr  key={team.competitor.id} className={index < 4 ? "green" : index >= fullTimeTotal.length - 4 ? "red" : "black"}>
                             <td>{index + 1}</td>
                             <td>{team.competitor.name}</td>
                             <td>{team.played}</td>
@@ -61,6 +64,17 @@ export default function Table() {
                         </tr>
                     ))}
                 </tbody>
-        </table>
+            </table>
+            <div className="legend">
+                <div className="legend-item">
+                    <span className="color-box green"></span>
+                    <span>Classificados para a Copa Libertadores</span>
+                </div>
+                <div className="legend-item">
+                    <span className="color-box red"></span>
+                    <span>Rebaixamento</span>
+                </div>
+            </div>
+        </div>
     );
 }

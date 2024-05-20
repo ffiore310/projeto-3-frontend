@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
-
+import Header from '/components/header'
 
 export default function Cadastro() {
     const navigate = useNavigate();
@@ -13,7 +13,6 @@ export default function Cadastro() {
     const [error, setError] = useState('');
 
     async function sendUser(event) {
-        
         event.preventDefault();
 
         const data = {
@@ -34,7 +33,6 @@ export default function Cadastro() {
             console.log("Sucesso ao criar usuário");
             setMsgSucesso(true);
             setTimeout(() => navigate('/login'), 2000);
-  
         } catch (error) {
             console.error("Falha ao criar usuário", error);
             if (error.response && error.response.status === 500) {
@@ -46,21 +44,23 @@ export default function Cadastro() {
     }
 
     return(
+        <div>
+            <Header />
+        <h1>Cadastro</h1>
         <form onSubmit={sendUser}>
-            <div>
-                <label>Username:</label>
-                <input type="text" name="username" placeholder="Digite seu username" onChange={(event) => setUsername(event.target.value)} />
+            <div className="mb-3">
+                <label htmlFor="username" className="form-label">Usuário</label>
+                <input type="text" className="form-control" id="username" placeholder="Digite seu username" onChange={(event) => setUsername(event.target.value)} />
             </div>
-            <div>
-                <label>Password:</label>
-                <input type="senha" name="senha" placeholder="Digite sua senha" onChange={(event) => setSenha(event.target.value)} />
+            <div className="mb-3">
+                <label htmlFor="senha" className="form-label">Senha</label>
+                <input type="password" className="form-control" id="senha" placeholder="Digite sua senha" onChange={(event) => setSenha(event.target.value)} />
             </div>
-            <div>
-                <label>Email:</label>
-                <input type="email" name="email" placeholder="Digite seu email"  onChange={(event) => setEmail(event.target.value)} />
+            <div className="mb-3">
+                <label htmlFor="email" className="form-label">Email</label>
+                <input type="email" className="form-control" id="email" placeholder="Digite seu email"  onChange={(event) => setEmail(event.target.value)} />
             </div>
-            
-            <button type="submit">Sign Up</button>
+            <button type="submit" className="btn btn-primary bg-dark">Cadastrar</button>
             <div className="msgSucesso">
                 {msgSucesso && <p>Usuário criado com sucesso! Redirecionando para a tela de Login...</p>}
             </div>
@@ -68,5 +68,6 @@ export default function Cadastro() {
                 {error && <p>{error}</p>}
             </div>
         </form>
+        </div>
     );
 }

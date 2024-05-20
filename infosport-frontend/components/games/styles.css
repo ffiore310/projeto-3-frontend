@@ -1,31 +1,67 @@
 .game-widget {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 5px;
     margin: 10px 0;
     border-radius: 5px;
     background-color: #f9f9f9;
 }
 
 .game-date {
-    font-size: 1.2em;
+    font-size: .8em;
     margin-bottom: 5px;
+    font-weight: bold;
+    padding-top : 5px;
+    justify-content: center;
 }
 
 .teams {
-    font-size: 1.1em;
+    font-size: 1.0em;
     margin-bottom: 5px;
+    font-weight: bold;
+    background-color: white;
+    border-bottom: black 1px solid;
+    
 }
 
 .vs {
     margin: 0 10px;
+    font-weight: italic;
 }
 
 .probabilities {
     display: flex;
     justify-content: space-between;
+    border-bottom: black 1px solid;
+    padding: 5px;
 }
 
-.probability {
+.probability_home {
     font-size: 1em;
     margin-right: 10px;
+    background-color: greenyellow;
+    border-radius: 5px;
 }
+
+.probability_draw {
+    font-size: 1em;
+    margin-right: 10px;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+.probability_away {
+    font-size: 1em;
+    margin-right: 10px;
+    background-color: lightcoral;
+    border-radius: 5px;
+}
+
+.tudo {
+    display: flex;
+    justify-content: center;
+    gap : 10px;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+

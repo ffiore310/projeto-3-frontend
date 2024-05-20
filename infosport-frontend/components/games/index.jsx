@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from 'axios';
 import "./styles.css";
+import Header from '/components/header'
 
 export default function Games() {
     const [data, setData] = useState([]);
@@ -37,14 +38,20 @@ export default function Games() {
 
     return (
         <div>
+        <Header />
+        <div>
+
+        <h1>Partidas</h1>
+            <div className="tudo">
             {carregando ? (
-                <div>Carregando...</div>
+                <div class="spinner-grow" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
             ) : (
+                
                 games.map(event => (
                     <div key={event.sport_event.id} className="game-widget">
-                        <div className="game-date">
-                            {new Date(event.sport_event.start_time).toLocaleString()}
-                        </div>
+                       
                         <div className="teams">
                             <span className="team home-team">
                                 {event.sport_event.competitors.find(c => c.qualifier === "home").name}
@@ -54,20 +61,26 @@ export default function Games() {
                                 {event.sport_event.competitors.find(c => c.qualifier === "away").name}
                             </span>
                         </div>
+                       
                         <div className="probabilities">
-                            <span className="probability">
+                            <span className="probability_home">
                                 Home Win: {event.markets[0].outcomes.find(o => o.name === "home_team_winner").probability}%
                             </span>
-                            <span className="probability">
+                            <span className="probability_draw">
                                 Draw: {event.markets[0].outcomes.find(o => o.name === "draw").probability}%
                             </span>
-                            <span className="probability">
+                            <span className="probability_away">
                                 Away Win: {event.markets[0].outcomes.find(o => o.name === "away_team_winner").probability}%
                             </span>
+                        </div>
+                        <div className="game-date">
+                            {new Date(event.sport_event.start_time).toLocaleString()}
                         </div>
                     </div>
                 ))
             )}
+        </div>
+        </div>
         </div>
     )
 }

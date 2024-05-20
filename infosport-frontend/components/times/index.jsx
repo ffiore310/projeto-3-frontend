@@ -1,5 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import './style.css';
+import Header from '/components/header'
+
+
 
 
 
@@ -55,17 +59,25 @@ function Times() {
   
       return (
         <div>
-          <h1>Nomes dos Times:</h1>
-          {message && <p>{message}</p>} {/* Mostra a mensagem de feedback */}
-          <ul>
-            {teams.map((team, index) => (
-              <li key={index}>
-                {team}
-                <button onClick={() => favoritarTime(team)}>Favoritar</button>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <Header />
+<div>
+  <h1 className="title">Times</h1>
+  
+  <ul className="team-list">
+    {teams.map((team, index) => (
+      <div className="card">
+      <li key={index} className="team-item">
+        {team}
+        <button className = "favorite-button" onClick={() => favoritarTime(team)}>☆</button>
+        
+      </li>
+      </div>
+    ))}
+  </ul>
+  
+</div>
+{message && <p className="feedback-message">{message}</p>}
+</div>
       );
     }
     

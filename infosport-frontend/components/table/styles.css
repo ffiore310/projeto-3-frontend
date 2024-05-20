@@ -1,0 +1,49 @@
+.green {
+    background-color: #00ff00;
+    border-bottom: 1px solid black;
+
+}
+
+.red {
+    background-color: red;
+    border-bottom: 1px solid black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+    
+}
+
+.black {
+    border-bottom: 1px solid black;
+}
+.legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.color-box.green {
+    background-color: #00ff00;
+}
+
+.color-box.red {
+    background-color: red;
+}
