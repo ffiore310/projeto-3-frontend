@@ -16,7 +16,7 @@ function Times() {
     useEffect(() => {
         const options = {
             method: 'GET',
-            url: "http://localhost:8000/api/soccer/",
+            url: "https://projeto-3-back.onrender.com/api/soccer/",
         };
 
         axios
@@ -40,7 +40,7 @@ function Times() {
     }
 
       console.log("Favoritando time", team);
-      const url = "http://localhost:8000/api/favorita/"; // URL do endpoint do backend Django
+      const url = "https://projeto-3-back.onrender.com/api/favorita/"; // URL do endpoint do backend Django
       const body = {'name': team}; // ou qualquer dado específico que o backend precisa
       const config = {
         headers: {

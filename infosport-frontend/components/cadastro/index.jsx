@@ -23,7 +23,7 @@ export default function Cadastro() {
 
         const options = {
             method: 'POST',
-            url: 'http://localhost:8000/api/users/',
+            url: 'https://projeto-3-back.onrender.com/api/users/',
             headers: {accept: 'application/json'},
             data: data
         }

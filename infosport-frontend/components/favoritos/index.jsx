@@ -32,11 +32,11 @@ export default function Favoritos() {
           },
           };
         axios
-            .delete(`http://localhost:8000/api/favorita/delete`,config)
+            .delete(`https://projeto-3-back.onrender.com/api/favorita/delete`,config)
             .then((res) => {
                 console.log(res.data);
                 axios
-                  .get("http://localhost:8000/api/favorita/",config)
+                  .get("https://projeto-3-back.onrender.com/api/favorita/",config)
                   .then((res) => {
                       console.log(res.data);
                       setFavoritos(res.data)

@@ -10,7 +10,7 @@ export default function Login() {
 
     const login = (event) => {
         event.preventDefault();
-        const url = "http://localhost:8000/api/token/";
+        const url = "https://projeto-3-back.onrender.com/api/token/";
         const body = {'username': username, "password": password};
         axios.post(url, body)
         .then((response) => {

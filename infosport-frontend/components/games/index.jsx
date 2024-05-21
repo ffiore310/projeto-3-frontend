@@ -11,7 +11,7 @@ export default function Games() {
     async function getData(){
         const options = {
             method: "GET",
-            url: 'http://localhost:8000/api/soccer/games',
+            url: 'https://projeto-3-back.onrender.com/api/soccer/games',
             headers: {accept: 'application/json'}
         } 
         try {

@@ -9,7 +9,7 @@ export default function Table() {
     async function getTable() {
         const options = {
             method: 'GET',
-            url: 'http://localhost:8000/api/soccer/table',
+            url: 'https://projeto-3-back.onrender.com/api/soccer/table',
             headers: {accept: 'application/json'}
         }
         try {
